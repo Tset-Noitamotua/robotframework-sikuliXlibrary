@@ -321,10 +321,10 @@ class _SikuliX_Keywords(BaseLogger):
 
 	def check_post_condition(self, *args, **kwargs):
 
-		self.timeout = kwargs.get('timeout')
+		self.timeout = kwargs.get('timeout', self.timeout)
 
 		# change MinSimilarity if necessary
-		self.similarity = kwargs.get('similarity')
+		self.similarity = kwargs.get('similarity', self.similarity)
 		Settings.MinSimilarity = float(self.similarity)
 
 		# log given arguments
