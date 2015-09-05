@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.9.1 (Jython 2.7.0 on java1.8.0_05)" generated="20150903 17:57:03.263">
+<suite source="C:\_GITHUB\robotframework-sikulixlibrary\test\library_self_test.robot" name="Library Self Test" id="s1">
+<test name="SikuliXLibrary Arguments" id="s1-t1">
+<kw type="setup" name="Start Calculator and Focus it's window">
+<msg level="TRACE" timestamp="20150903 17:57:06.539">Arguments: [  ]</msg>
+<kw library="SikuliXLibrary" name="Start App">
+<msg level="TRACE" timestamp="20150903 17:57:06.550">Arguments: [  ]</msg>
+<msg level="INFO" timestamp="20150903 17:57:09.573">[log] App.open calc.exe(6868)
+[log] App.focus Rechner(0) #0</msg>
+<msg level="TRACE" timestamp="20150903 17:57:09.575">Return: None</msg>
+<status endtime="20150903 17:57:09.578" starttime="20150903 17:57:06.547" status="PASS"></status>
+</kw>
+<kw library="SikuliXLibrary" name="Verify App">
+<msg level="TRACE" timestamp="20150903 17:57:09.582">Arguments: [  ]</msg>
+<msg level="INFO" timestamp="20150903 17:57:10.950">PASS: Calculator window appeared</msg>
+<msg level="INFO" html="yes" timestamp="20150903 17:57:10.951">Source Image &lt;img src="../library_self_test_images/CalcApp.png" /&gt;</msg>
+<msg level="INFO" html="yes" timestamp="20150903 17:57:10.952">Best Matches &lt;img src="../results/matches/2015-09-03_17-57-10.png" /&gt;</msg>
+<msg level="INFO" timestamp="20150903 17:57:10.952">Matched with score: 0.997416913509</msg>
+<msg level="TRACE" timestamp="20150903 17:57:10.958">Return: None</msg>
+<status endtime="20150903 17:57:10.960" starttime="20150903 17:57:09.581" status="PASS"></status>
+</kw>
+<kw library="SikuliXLibrary" name="Click">
+<doc>Dokumentation fehlt!!!</doc>
+<arguments>
+<arg>btnC.png</arg>
+</arguments>
+<msg level="TRACE" timestamp="20150903 17:57:10.970">Arguments: [ 'btnC.png' ]</msg>
+<msg level="INFO" timestamp="20150903 17:57:12.386">*args in 'NEW_CLICK:CASE 1 START()':
+- args[0] = btnC.png
+
+
+**kwargs in 'NEW_CLICK:CASE 1 START()': 
+
+
+__init__(vars) in 'NEW_CLICK:CASE 1 START()':
+- self.timeout:			5.55
+- self.action:			click
+- self.click_target:		None
+- self.post_condition:		None
+- self.similarity:		0.77
+- self.location:		None
+- self.single_key:		
+
+
+*args in 'NEW_CLICK:CASE 1 - one arg is image (.png)()':
+- args[0] = btnC.png
+
+
+**kwargs in 'NEW_CLICK:CASE 1 - one arg is image (.png)()': 
+
+
+__init__(vars) in 'NEW_CLICK:CASE 1 - one arg is image (.png)()':
+- self.timeout:			5.55
+- self.action:			click
+- self.click_target:		btnC.png
+- self.post_condition:		None
+- self.similarity:		0.77
+- self.location:		None
+- self.single_key:		
+
+
+[log] CLICK on L(932,511)@S(0)[0,0 1440x900]</msg>
+<msg level="FAIL" timestamp="20150903 17:57:12.398">TypeError: float() argument must be a string or a number</msg>
+<msg level="DEBUG" timestamp="20150903 17:57:12.401">Traceback (most recent call last):
+  File "C:\_GITHUB\robotframework-sikulixlibrary\scr\SikuliXLibrary\keywords\_sikulix_keywords.py", line 45, in click
+    self.check_post_condition(*args, **kwargs)
+  File "C:\_GITHUB\robotframework-sikulixlibrary\scr\SikuliXLibrary\keywords\_sikulix_keywords.py", line 328, in check_post_condition
+    Settings.MinSimilarity = float(self.similarity)</msg>
+<status endtime="20150903 17:57:12.402" starttime="20150903 17:57:10.966" status="FAIL"></status>
+</kw>
+<status endtime="20150903 17:57:12.407" starttime="20150903 17:57:06.527" status="FAIL"></status>
+</kw>
+<tags>
+<tag>log</tag>
+</tags>
+<status critical="yes" endtime="20150903 17:57:12.413" starttime="20150903 17:57:06.509" status="FAIL">Setup failed:
+TypeError: float() argument must be a string or a number</status>
+</test>
+<doc>The purpose of this test suite is to test the functionality of
+'Robot Framework SikuliXLibrary'.
+
+Start testexecution:
+in CMD:
+jybottest library_self_test.robot
+NOTE: this will run all tests in this suite.
+
+in CMD with options:
+jybottest --include TAG_1 --noncritical TAG_2 library_self_test.robot
+NOTE: this will only run tests with TAG_1 AND additionally test with
+TAG_2 will be treated as noncritical and thus will have no influence
+on overall suite result.
+from file explorer:
+doubleclick run_library_self_test_with_jybot.bat OR ~...pybot.bat
+</doc>
+<status endtime="20150903 17:57:12.424" starttime="20150903 17:57:03.313" status="FAIL"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">log</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" name="Library Self Test" id="s1">Library Self Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
